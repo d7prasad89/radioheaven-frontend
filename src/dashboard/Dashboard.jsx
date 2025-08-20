@@ -65,8 +65,8 @@ function Dashboard() {
             </label>
             </th>
             <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
+            <th>Album</th>
+            <th>Length In Seconds</th>
             <th></th>
         </tr>
         </thead>
@@ -90,9 +90,7 @@ function Dashboard() {
                           <div className="flex items-center gap-3">
                               <div className="avatar">
                                   <div className="mask mask-squircle h-12 w-12">
-                                      <img
-                                          src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                                          alt="Avatar Tailwind CSS Component" />
+                                      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Avatar Tailwind CSS Component" />
                                   </div>
                               </div>
                               <div>
@@ -102,11 +100,11 @@ function Dashboard() {
                           </div>
                       </td>
                       <td>
-                          Zemlak, Daniel and Leannon
+                          {record.album ? record.album : 'N/A'}
                           <br />
-                          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                          <span className="badge badge-ghost badge-sm">Favorite: {record.favorite ? 'Yes': 'No'}</span>
                       </td>
-                      <td>Purple</td>
+                      <td>{record.lengthInSeconds}</td>
                       <th>
                           <button className="btn btn-ghost btn-xs">details</button>
                       </th>
