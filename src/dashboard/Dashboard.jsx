@@ -79,7 +79,7 @@ function Dashboard() {
       <div className="tabs tabs-box">
         <input type="radio" name="my_tabs_6" className="tab" aria-label="Songs" defaultChecked/>
 
-        <div className="tab-content bg-base-100 border-base-300 p-6">
+        <div className="tab-content bg-base-100 border-base-300 p-6" style={{ minWidth: '800px', minHeight: '400px' }}>
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <label htmlFor="artist-filter" className="font-semibold">Filter by Artist:</label>
             <select
@@ -94,7 +94,7 @@ function Dashboard() {
               ))}
             </select>
           </div>
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto w-full flex justify-center">
     <table className="table">
         {/* head */}
         <thead>
@@ -201,10 +201,10 @@ function Dashboard() {
         </div>
 
         <input type="radio" name="my_tabs_6" className="tab" aria-label="Sermons"  />
-        <div className="tab-content bg-base-100 border-base-300 p-6">Sermons</div>
+        <div className="tab-content bg-base-100 border-base-300 p-6"  style={{ minWidth: '800px', minHeight: '400px' }}>Sermons</div>
 
         <input type="radio" name="my_tabs_6" className="tab" aria-label="Podcast" />
-        <div className="tab-content bg-base-100 border-base-300 p-6">Podcast</div>
+        <div className="tab-content bg-base-100 border-base-300 p-6"  style={{ minWidth: '800px', minHeight: '400px' }}>Podcast</div>
       </div>
     {currentSong && (
       <div className="fixed bottom-0 left-0 w-full bg-base-200 border-t border-base-300 p-4 flex items-center justify-center gap-4 z-50">
