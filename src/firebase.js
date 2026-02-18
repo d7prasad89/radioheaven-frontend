@@ -2,9 +2,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut as fbSignOut } from "firebase/auth";
 
-const firebaseConfig = { 
+const firebaseConfig = {
+
 
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

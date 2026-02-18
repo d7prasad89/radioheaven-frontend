@@ -1,14 +1,26 @@
-
+import { useContext } from "react";
 import './App.css'
+import { AuthProvider, AuthContext } from "./auth/AuthProvider";
+import Login from "./components/Login";
 import Dashboard from './dashboard/Dashboard'
+
+
+function AppContent() {
+  const { user, loading } = useContext(AuthContext);
+
+  if (loading) {
+    return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
+  }
+
+  return user ? <Dashboard /> : <Login />;
+}
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-3xl font-bold mb-4">Radio Heaven</h1>
-      <Dashboard />
-    </>
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   )
 }
 

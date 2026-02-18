@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../auth/AuthProvider";
+import { signOut } from "../firebase";
 
 
 function Dashboard() {
@@ -69,6 +72,8 @@ function Dashboard() {
 
   return (
     <div className="container mx-auto py-8 flex flex-col items-center">
+      <button onClick={signOut} className="btn btn-outline self-end mb-4">Sign Out</button>
+
       <h2 className="text-2xl font-bold mb-6">Whoever has ears, let them hear - Matthew 11:15</h2>
       {/* name of each tab group should be unique */}
 
